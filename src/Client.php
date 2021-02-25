@@ -31,7 +31,7 @@ use function realpath;
  */
 class Client extends GuzzleClient
 {
-    public function __construct()
+    public function __construct(array $config = [])
     {
         parent::__construct(
             new HttpClient(),
@@ -39,7 +39,30 @@ class Client extends GuzzleClient
             null,
             null,
             null,
-            []
+            $config
         );
+
+        $this->setDefaults($config);
+    }
+
+    private function setDefaults(array $config)
+    {
+        if (!isset($config['userName'])) {
+            throw new \InvalidArgumentException(
+                'You must provide an userName.'
+            );
+        }
+        if (!isset($config['password'])) {
+            throw new \InvalidArgumentException(
+                'You must provide an password.'
+            );
+        }
+
+        $defaults = [];
+
+        $defaults['userName'] = $config['userName'];
+        $defaults['password'] = $config['password'];
+
+        $this->setConfig('defaults', $defaults);
     }
 }
