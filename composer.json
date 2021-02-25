@@ -1,0 +1,15 @@
+{
+  "name": "davidnadejdin/alfabank-php-client",
+  "description": "Api client for Alfabank",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "guzzlehttp/guzzle-services": "^1.2",
+    "gimler/guzzle-description-loader": "^0.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Davidnadejdin\\AlfabankClient\\": "src/"
+    }
+  }
+}
