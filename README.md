@@ -39,5 +39,8 @@ $client->register([]);
 
 license. Please see the [license file](LICENSE) for more information.
 
+## Related packages
+- [cavidnadejdin/alfabank-laravel](https://github.com/Davidnadejdin/alfabank-laravel) Laravel alfabank facade.
+
 [link-author]: https://github.com/davidnadejdin
 [link-contributors]: ../../contributors
