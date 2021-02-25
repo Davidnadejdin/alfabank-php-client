@@ -37,7 +37,7 @@ $client->register([]);
 
 ## License
 
-license. Please see the [license file](license.md) for more information.
+license. Please see the [license file](LICENSE) for more information.
 
 [link-author]: https://github.com/davidnadejdin
 [link-contributors]: ../../contributors
