@@ -5,7 +5,6 @@ namespace Davidnadejdin\AlfabankClient;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Guzzle\Description;
-use function realpath;
 
 /**
  * Class Client

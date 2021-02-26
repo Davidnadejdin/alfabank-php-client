@@ -4,7 +4,7 @@
   "type": "library",
   "license": "MIT",
   "require": {
-    "guzzlehttp/guzzle-services": "^1.2"
+    "guzzlehttp/guzzle-services": "^1"
   },
   "autoload": {
     "psr-4": {
