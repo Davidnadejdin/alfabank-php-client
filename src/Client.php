@@ -46,21 +46,25 @@ class Client extends GuzzleClient
 
     private function setDefaults(array $config)
     {
-        if (!isset($config['userName'])) {
-            throw new \InvalidArgumentException(
-                'You must provide an userName.'
-            );
-        }
-        if (!isset($config['password'])) {
-            throw new \InvalidArgumentException(
-                'You must provide an password.'
-            );
-        }
-
         $defaults = [];
 
-        $defaults['userName'] = $config['userName'];
-        $defaults['password'] = $config['password'];
+        if (isset($config['token'])) {
+            $defaults['token'] = $config['token'];
+        } else {
+            if (!isset($config['userName'])) {
+                throw new \InvalidArgumentException(
+                    'You must provide an userName.'
+                );
+            }
+            if (!isset($config['password'])) {
+                throw new \InvalidArgumentException(
+                    'You must provide an password.'
+                );
+            }
+
+            $defaults['userName'] = $config['userName'];
+            $defaults['password'] = $config['password'];
+        }
 
         $this->setConfig('defaults', $defaults);
     }

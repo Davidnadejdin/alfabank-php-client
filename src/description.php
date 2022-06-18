@@ -1,20 +1,25 @@
 <?php
 
 return [
-    'baseUrl' => 'https://web.rbsuat.com/ab/rest',
+    'baseUrl' => 'https://web.rbsuat.com',
     'operations' => [
         'register' => [
             'httpMethod' => 'POST',
-            'uri' => '/register.do',
+            'uri' => '/ab/rest/register.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
-                    'required' => true,
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
                 'password' => [
-                    'required' => true,
+                    'required' => false,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -97,7 +102,7 @@ return [
         ],
         'registerPreAuth' => [
             'httpMethod' => 'POST',
-            'uri' => '/registerPreAuth.do',
+            'uri' => '/ab/rest/registerPreAuth.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -107,6 +112,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -189,7 +199,7 @@ return [
         ],
         'deposit' => [
             'httpMethod' => 'POST',
-            'uri' => '/deposit.do',
+            'uri' => '/ab/rest/deposit.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -199,6 +209,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -216,16 +231,21 @@ return [
         ],
         'getOrderStatus' => [
             'httpMethod' => 'POST',
-            'uri' => '/getOrderStatus.do',
+            'uri' => '/ab/rest/getOrderStatus.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
-                    'required' => true,
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
                 'password' => [
-                    'required' => true,
+                    'required' => false,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -243,7 +263,7 @@ return [
         ],
         'getOrderStatusExtended' => [
             'httpMethod' => 'POST',
-            'uri' => '/getOrderStatusExtended.do',
+            'uri' => '/ab/rest/getOrderStatusExtended.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -253,6 +273,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -275,7 +300,7 @@ return [
         ],
         'reverse' => [
             'httpMethod' => 'POST',
-            'uri' => '/reverse.do',
+            'uri' => '/ab/rest/reverse.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -285,6 +310,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -302,7 +332,7 @@ return [
         ],
         'refund' => [
             'httpMethod' => 'POST',
-            'uri' => '/refund.do',
+            'uri' => '/ab/rest/refund.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -312,6 +342,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -329,7 +364,7 @@ return [
         ],
         'verifyEnrollment' => [
             'httpMethod' => 'POST',
-            'uri' => '/verifyEnrollment.do',
+            'uri' => '/ab/rest/verifyEnrollment.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -339,6 +374,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -351,7 +391,7 @@ return [
         ],
         'addParams' => [
             'httpMethod' => 'POST',
-            'uri' => '/addParams.do',
+            'uri' => '/ab/rest/addParams.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -361,6 +401,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -383,7 +428,7 @@ return [
         ],
         'getLastOrdersForMerchants' => [
             'httpMethod' => 'POST',
-            'uri' => '/getLastOrdersForMerchants.do',
+            'uri' => '/ab/rest/getLastOrdersForMerchants.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -393,6 +438,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -440,7 +490,7 @@ return [
         ],
         'paymentotherway' => [
             'httpMethod' => 'POST',
-            'uri' => '/paymentotherway.do',
+            'uri' => '/ab/rest/paymentotherway.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -450,6 +500,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -472,7 +527,7 @@ return [
         ],
         'paymentOrderBinding' => [
             'httpMethod' => 'POST',
-            'uri' => '/paymentOrderBinding.do',
+            'uri' => '/ab/rest/paymentOrderBinding.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -482,6 +537,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -519,7 +579,7 @@ return [
         ],
         'unBindCard' => [
             'httpMethod' => 'POST',
-            'uri' => '/unBindCard.do',
+            'uri' => '/ab/rest/unBindCard.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -529,6 +589,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -541,7 +606,7 @@ return [
         ],
         'bindCard' => [
             'httpMethod' => 'POST',
-            'uri' => '/bindCard.do',
+            'uri' => '/ab/rest/bindCard.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -551,6 +616,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -563,7 +633,7 @@ return [
         ],
         'extendBinding' => [
             'httpMethod' => 'POST',
-            'uri' => '/extendBinding.do',
+            'uri' => '/ab/rest/extendBinding.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -573,6 +643,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -595,7 +670,7 @@ return [
         ],
         'getBindings' => [
             'httpMethod' => 'POST',
-            'uri' => '/getBindings.do',
+            'uri' => '/ab/rest/getBindings.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -605,6 +680,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -617,7 +697,7 @@ return [
         ],
         'getBindingsByCardOrId' => [
             'httpMethod' => 'POST',
-            'uri' => '/getBindingsByCardOrId.do',
+            'uri' => '/ab/rest/getBindingsByCardOrId.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'userName' => [
@@ -627,6 +707,11 @@ return [
                 ],
                 'password' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
@@ -649,7 +734,7 @@ return [
         ],
         'payment' => [
             'httpMethod' => 'POST',
-            'uri' => '/payment.do',
+            'uri' => '/ab/rest/payment.do',
             'responseModel' => 'Result',
             'parameters' => [
                 'merchant' => [
@@ -659,6 +744,11 @@ return [
                 ],
                 'orderNumber' => [
                     'required' => true,
+                    'type' => 'string',
+                    'location' => 'formParam',
+                ],
+                'token' => [
+                    'required' => false,
                     'type' => 'string',
                     'location' => 'formParam',
                 ],
